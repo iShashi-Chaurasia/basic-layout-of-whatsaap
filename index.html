@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basic Layout of WhatsApp</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        body {
+            
+            font-family: Arial, sans-serif;
+             background: #fcf5eb;;
+        }
+
+        .navbar-brand img {
+            height: 40px;
+        }
+        body {
+            background-color: #f7f1e8;
+        }
+        .content-section {
+            padding: 50px;
+        }
+      
+
+        .dark-section {
+            background-color: #111b21;
+            color: white;
+            padding: 50px;
+        }
+        .phone-mockup {
+            max-width: 300px;
+            border-radius: 25px;
+            
+            transform: translateY(100px);
+            opacity: 0;
+            transition: transform 1s ease-out, opacity 1s ease-out;
+        }
+        .phone-mockup.show {
+            transform: translateY(0);
+            opacity: 1;
+        }
+
+
+        nav{
+            background-color: #67481c;
+            background: #67481c;
+        }
+        .navbar {
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            background: #fcf5eb;
+            
+        }
+       
+
+        .hero {
+            background: url('hero.png') no-repeat center center/cover;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            border-radius: 30px;
+            padding: 20px;
+            margin: 80px;
+        }
+
+        .hero-content {
+            max-width: 600px;
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+        }
+
+        .hero .btn {
+            margin-left: 20px;
+            border-radius: 20px;
+            padding: 10px 20px;
+        }
+
+        .footer-link {
+            color: #999;
+            text-decoration: none;
+            font-size: 0.875rem;
+        }
+
+        .footer-link:hover {
+            color: #fff;
+        }
+
+        .app-badge {
+            max-width: 120px;
+        }
+
+       
+        @media (max-width: 768px) {
+            .hero h1 {
+                margin-top: 100px;
+                font-size: 3rem;
+            }
+            body{
+                
+                background: #fcf5eb;
+            }
+            .hero{
+                margin: 10px;
+            }
+            .hero p {
+                font-size: 1.0rem;
+                
+            }
+
+            .hero {
+                min-height: 80vh;
+            }
+            .btn-light{
+                display: none;
+            }
+            .btn-success{
+                width: 100%;
+                border-radius: 20px;
+                padding: 10px 15px;
+                background-color: #25d366;
+                border: 1px solid #000000;
+                margin-bottom: -350px;
+                
+            }
+
+            .hero .btn {
+                width: 50%;
+                border-radius: 20px;
+                padding: auto;
+            }
+        }
+    </style>
+</head>
+<body>
+
+
+<nav class="navbar navbar-expand-lg">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="#">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="Logo">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item"><a class="nav-link active" href="#">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Features</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Download</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Help Center</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+
+<section class="hero">
+    <div class="hero-content text-center">
+        <h1>Message privately</h1>
+        <p>Simple, reliable, private messaging and calling <br> for free*, available all over the world.</p>
+        <a href="#" class="btn btn-light">Learn More</a>
+        <a href="#" class="btn btn-success">Download</a>
+    </div>
+    
+</section>
+
+<div class="container py-5">
+    <div class="row align-items-center">
+        <div class="col-md-6">
+            <h1 style="font-size: 60px;">Never miss a <br> moment with <br>voice and video <br>calls</h1>
+            <p>From a group call to classmates to a quick call with mom,<br> feel like you’re in the same room with voice and video <br>calls.</p>
+            <a href="https://www.whatsapp.com/stayconnected" class="text-success">Learn more →</a>
+        </div>
+        <div class="col-md-6 text-center mt-4">
+            <img src="image.png" alt="Video Call Preview" class="img-fluid phone-mockup" id="animatedImage">
+        </div>
+    </div>
+</div>
+
+<div class="container py-5">
+    <div class="row align-items-center">
+        <div class="col-md-6">
+            <h1 style="font-size: 60px;">Say what <br>you feel</h1>
+            <p>Express yourself without words. Use stickers and GIFs or share everyday moments on Status. Record a voice message for a quick hello or a longer story.</p>
+            <a href="https://www.whatsapp.com/stayconnected" class="text-success">Learn more →</a>
+        </div>
+        <div class="col-md-6 text-center mt-4">
+            <img src="image2.png" alt="Video Call Preview" class="img-fluid phone-mockup" id="animatedImage">
+        </div>
+    </div>
+</div>
+
+<div class="container-fluid dark-section">
+    <div class="row align-items-center">
+       
+        <div class="col-md-6 text-center mt-4">
+            <img src="image3.png" alt="Video Call Preview" class="img-fluid phone-mockup" id="animatedImage">
+        </div>
+        <div class="col-md-6">
+            <h1><span class="text-white">Speak</span> <span class="text-success">freely</span></h1>
+            <p>With end-to-end encryption, your personal messages and calls are secured. Only you and the person you're talking to can read or listen to them, and nobody in between, not even WhatsApp.</p>
+            <a href="#" class="text-success">Learn more →</a>
+        </div>
+    </div>
+</div>
+
+
+<footer class="bg-dark text-white pt-5 pb-4">
+    <div class="container">
+        <div class="row g-4 text-center text-md-start">
+            <div class="col-6 col-md-3">
+                <h6 class="text-uppercase mb-3">Company</h6>
+                <ul class="list-unstyled">
+                    <li><a href="#" class="footer-link">About</a></li>
+                    <li><a href="#" class="footer-link">Careers</a></li>
+                    <li><a href="#" class="footer-link">Brand Center</a></li>
+                    <li><a href="#" class="footer-link">Privacy</a></li>
+                </ul>
+            </div>
+            <div class="col-6 col-md-3">
+                <h6 class="text-uppercase mb-3">Download</h6>
+                <ul class="list-unstyled">
+                    <li><a href="#" class="footer-link">Mac/PC</a></li>
+                    <li><a href="#" class="footer-link">Android</a></li>
+                    <li><a href="#" class="footer-link">iPhone</a></li>
+                </ul>
+            </div>
+            <div class="col-6 col-md-3">
+                <h6 class="text-uppercase mb-3">Help</h6>
+                <ul class="list-unstyled">
+                    <li><a href="#" class="footer-link">Help Center</a></li>
+                    <li><a href="#" class="footer-link">Contact Us</a></li>
+                    <li><a href="#" class="footer-link">Security Advisories</a></li>
+                </ul>
+            </div>
+            <div class="col-6 col-md-3">
+                <h6 class="text-uppercase mb-3">Follow Us</h6>
+                <div>
+                    <a href="#" class="text-white me-3"><i class="fab fa-facebook"></i></a>
+                    <a href="#" class="text-white me-3"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="text-white me-3"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="text-white"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="row mt-5">
+            <div class="col-12 text-center">
+                <p class="text-muted mb-0" style="font-size: 0.75rem;">© 2023 WhatsApp LLC. All rights reserved.</p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+     document.addEventListener("DOMContentLoaded", function() {
+            document.getElementById("animatedImage").classList.add("show");
+        });
+</script>
+</body>
+</html>
